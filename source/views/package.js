@@ -1,3 +1,5 @@
 enyo.depends(
-	"views.js"
+    "views.js",
+    "PaceAndSpeed.js",
+    "About.js"
 );
