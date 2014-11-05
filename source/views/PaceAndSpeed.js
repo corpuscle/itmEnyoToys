@@ -41,14 +41,14 @@ enyo.kind({
     paceChanged: function(inSender, inEvent) {
 	var p = inSender.getValue();
 	if (p) {
-	    var s = 60.0 / p;
+	    var s = 60 / p;
 	    this.$.speed.setValue(s);
 	}
     },
     speedChanged: function(inSender, inEvent) {
 	var s = inSender.getValue();
 	if (s) {
-	    var p = 60.0 / s;
+	    var p = 60 / s;
 	    this.$.pace.setValue(p);
 	}
     }
