@@ -7,3 +7,6 @@
 [submodule "lib/layout"]
 	path = lib/layout
 	url = ../../enyojs/layout.git
+[submodule "lib/enyo-webos"]
+	path = lib/enyo-webos
+	url = ../../enyojs/enyo-webos.git

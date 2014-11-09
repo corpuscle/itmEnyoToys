@@ -1,4 +1,5 @@
 enyo.depends(
+    "$lib/enyo-webos",
 	// Layout library
 	"$lib/layout",
 	// Onyx UI library
