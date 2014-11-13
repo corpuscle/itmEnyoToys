@@ -15,7 +15,14 @@ enyo.kind({
 	    {kind: "onyx.Groupbox", components: [
 		{kind: "onyx.GroupboxHeader", content: "Speed (miles per hour)"},
 		{kind: "onyx.InputDecorator", components: [
-		    {name: "speed", kind: "onyx.Input", value: 20, type: "number", selectOnFocus: true, placeholder: "Number", onkeypress: "acceptOnlyNumbers", onchange: "speedChanged"}
+		    {name: "mph", kind: "onyx.Input", value: 20, type: "number", selectOnFocus: true, placeholder: "Number", onkeypress: "acceptOnlyNumbers", onchange: "mphChanged"}
+		]},
+	    ]},
+	    {content: "is equivalent to"},
+	    {kind: "onyx.Groupbox", components: [
+		{kind: "onyx.GroupboxHeader", content: "Speed (km per s)"},
+		{kind: "onyx.InputDecorator", components: [
+		    {name: "kps", kind: "onyx.Input", value: 20, type: "number", selectOnFocus: true, placeholder: "Number", onkeypress: "acceptOnlyNumbers", onchange: "kpsChanged"}
 		]},
 	    ]}
 	]}
@@ -41,15 +48,28 @@ enyo.kind({
     paceChanged: function(inSender, inEvent) {
 	var p = inSender.getValue();
 	if (p) {
-	    var s = 60 / p;
-	    this.$.speed.setValue(s);
+	    var mph = 60 / p;
+	    var kps = mph * (2.54 * 12 * 3 * 1760) / (60 * 60 * 1000 * 100);
+	    this.$.mph.setValue(mph);
+	    this.$.kps.setValue(kps);
 	}
     },
-    speedChanged: function(inSender, inEvent) {
-	var s = inSender.getValue();
-	if (s) {
-	    var p = 60 / s;
+    mphChanged: function(inSender, inEvent) {
+	var mph = inSender.getValue();
+	if (mph) {
+	    var p = 60 / mph;
+	    var kps = mph * (2.54 * 12 * 3 * 1760) / (60 * 60 * 1000 * 100);
 	    this.$.pace.setValue(p);
+	    this.$.kps.setValue(kps);
+	}
+    },
+    kpsChanged: function(inSender, inEvent) {
+	var kps = inSender.getValue();
+	if (kps) {
+	    var mph = kps * (60 * 60 * 1000 * 100) / (2.54 * 12 * 3 * 1760);
+	    var p = 60 / mph;
+	    this.$.pace.setValue(p);
+	    this.$.mph.setValue(mph);
 	}
     }
 });
