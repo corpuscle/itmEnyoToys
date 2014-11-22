@@ -10,7 +10,6 @@ enyo.kind({
     create: function() {
 	this.inherited(arguments);
 	if (window.webOS) {
-	    webOS.orientation.setOrientation("free");
 	    this.$.identity.setContent(webOS.fetchAppInfo().title + " " + webOS.fetchAppInfo().version);
 	    this.$.copyright.setContent("\251 Copyright 2014 " + webOS.fetchAppInfo().vendor);
 	}
