@@ -4,9 +4,9 @@ enyo.kind({
     arrangerKind: "CollapsingArranger",
     components:[
 	{kind: "enyo.AppMenu", style: "overflow: hidden;", components: [
-	    { kind: "enyo.AppMenuItem", content: "Help", ontap: "doNowt" }
+	    { kind: "enyo.AppMenuItem", content: "About", ontap: "showAbout" }
 	]},
-	{kind: "Panels", fit: true, components: [
+	{name: "content", kind: "Panels", fit: true, components: [
 	     {name: "degreesAndMinutesView", kind: "equivalents.DecimalsAndMinutes"},
 	     {name: "paceAndSpeedView", kind: "equivalents.PaceAndSpeed"},
 	     {name: "altitude", kind: "equivalents.Altitude"},
@@ -14,6 +14,7 @@ enyo.kind({
 	     {name: "aboutBox", kind: "equivalents.About"}
 	]}
     ],
-    doNowt: function () {
+    showAbout: function () {
+	this.$.content.selectPanelByName("aboutBox");
     }
 });
