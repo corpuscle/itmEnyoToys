@@ -10,8 +10,8 @@ enyo.kind({
     create: function() {
 	this.inherited(arguments);
 	if (window.PalmSystem) {
-	    this.$.identity.setContent(webOS.fetchAppInfo().title + " " + webOS.fetchAppInfo().version);
-	    this.$.copyright.setContent("\251 Copyright 2015 " + webOS.fetchAppInfo().vendor);
+	    this.$.identity.setContent(webos.fetchAppInfo().title + " " + webos.fetchAppInfo().version);
+	    this.$.copyright.setContent("\251 Copyright 2015 " + webos.fetchAppInfo().vendor);
 	}
     }
 });
