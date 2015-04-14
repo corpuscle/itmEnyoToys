@@ -22,7 +22,7 @@ enyo.kind({
 	    {kind: "onyx.Groupbox", components: [
 		{kind: "onyx.GroupboxHeader", content: "Speed (km per s)"},
 		{kind: "onyx.InputDecorator", components: [
-		    {name: "kps", kind: "onyx.Input", value: 20, type: "number", selectOnFocus: true, placeholder: "Number", onkeypress: "acceptOnlyNumbers", onchange: "kpsChanged"}
+		    {name: "kps", kind: "onyx.Input", value: 0.0089408, type: "number", selectOnFocus: true, placeholder: "Number", onkeypress: "acceptOnlyNumbers", onchange: "kpsChanged"}
 		]},
 	    ]}
 	]}
