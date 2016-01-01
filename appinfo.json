@@ -1,10 +1,10 @@
 {
-  "id": "uk.me.och.equivalents",
-  "version": "2.99.07",
+  "id": "uk.me.och.enyotoys",
+  "version": "1.0",
   "vendor": "Ian Miller",
   "type": "web",
   "main": "index.html",
-  "title": "Equivalents",
+  "title": "EnyoToys",
   "icon": "icon.png",
   "miniicon": "miniicon.png",
   "uiRevision": "2"

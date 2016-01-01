@@ -1,1 +1,1 @@
-Equivalents translates quantities to equivalent quantities with the minimum of fuss.
+My experiments with Enyo.

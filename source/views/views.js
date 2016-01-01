@@ -1,5 +1,5 @@
 enyo.kind({
-    name: "equivalents.MainView",
+    name: "enyoToys.MainView",
     kind: "Panels",
     arrangerKind: "CollapsingArranger",
     components:[
@@ -7,11 +7,8 @@ enyo.kind({
 	    { kind: "enyo.AppMenuItem", content: "About", ontap: "showAbout" }
 	]},
 	{name: "content", kind: "Panels", fit: true, components: [
-	     {name: "degreesAndMinutesView", kind: "equivalents.DecimalsAndMinutes"},
-	     {name: "paceAndSpeedView", kind: "equivalents.PaceAndSpeed"},
-	     {name: "altitude", kind: "equivalents.Altitude"},
-	     {name: "schoolYears", kind: "equivalents.SchoolYears"},
-	     {name: "aboutBox", kind: "equivalents.About"}
+	     {name: "audioView", kind: "enyoToys.AudioView"},
+	     {name: "aboutBox", kind: "enyoToys.About"}
 	]}
     ],
     showAbout: function () {

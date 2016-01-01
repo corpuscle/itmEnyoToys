@@ -1,8 +1,5 @@
 enyo.depends(
     "views.js",
-    "DecimalsAndMinutes.js",
-    "PaceAndSpeed.js",
-    "Altitude.js",
-    "SchoolYears.js",
+    "AudioView.js",
     "About.js"
 );
